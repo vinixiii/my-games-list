@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express from 'express';
+import { gamesRouter } from './routes/games.routes';
 
 const app = express();
 
@@ -7,9 +8,7 @@ app.use(cors());
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.json('Hello World!');
-});
+app.use(gamesRouter);
 
 const PORT = 3333;
 
