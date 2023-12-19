@@ -7,4 +7,12 @@ export class GameController {
 
     return res.status(200).json(gameList);
   }
+
+  async getById(req: Request<{ id: string }>, res: Response) {
+    const { id } = req.params;
+
+    const game = await gamesService.getById(id);
+
+    return res.status(200).json(game);
+  }
 }
