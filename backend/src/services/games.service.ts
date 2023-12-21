@@ -1,5 +1,9 @@
 import { Game } from '../domains/games.domain';
-import { CreateEspmGameDTO, EspmGameDTO } from '../dtos/espmGame.dto';
+import {
+  CreateEspmGameDTO,
+  EspmGameDTO,
+  UpdateEspmGameDTO,
+} from '../dtos/espmGame.dto';
 import { espmGameApi } from '../helpers/espmGameApi.helper';
 import {
   espmGameDTOToGame,
@@ -30,9 +34,24 @@ class GamesService {
       idadeMinima: minimumAge,
     };
 
-    const apiResponse = await espmGameApi.post<number>('', dto);
+    const apiResponse = await espmGameApi.post<number>('/', dto);
 
     return apiResponse.data;
+  }
+
+  async update(game: Game) {
+    const { id, name, description, developedBy, year, minimumAge } = game;
+
+    const dto: UpdateEspmGameDTO = {
+      id,
+      nome: name,
+      descricao: description,
+      produtora: developedBy,
+      ano: year,
+      idadeMinima: minimumAge,
+    };
+
+    await espmGameApi.put<true>('/', dto);
   }
 
   async delete(id: string) {

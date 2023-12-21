@@ -25,6 +25,14 @@ export class GameController {
     return res.status(201).json(createdGameId);
   }
 
+  async update(req: Request<{}, {}, Game>, res: Response) {
+    const game = req.body;
+
+    await gamesService.update(game);
+
+    return res.status(200).json(true);
+  }
+
   async delete(req: Request<{ id: string }>, res: Response) {
     const { id } = req.params;
 
