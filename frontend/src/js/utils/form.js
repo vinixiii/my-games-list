@@ -4,15 +4,15 @@ import 'jquery-validation';
 const validateForm = (formId, onSubmit) => {
   $.validator.addMethod(
     'whitespace',
-    (value) => {
-      return Boolean(value.trim().length);
+    function (value, element) {
+      return this.optional(element) || Boolean(value.trim().length);
     },
     'O campo não pode conter apenas espaços em branco.'
   );
 
   $.validator.addMethod(
     'int',
-    (value, element) => {
+    function (value, element) {
       return this.optional(element) || /^\d+$/.test(value.trim());
     },
     'Por favor, insira apenas números inteiros.'
@@ -62,15 +62,15 @@ const validateForm = (formId, onSubmit) => {
         number: 'Este campo deve ser um número.',
       },
     },
-    errorElement: 'label',
-    errorPlacement: (error, element) => {
+    errorElement: 'div',
+    errorPlacement: function (error, element) {
       error.addClass('invalid-feedback');
       error.insertAfter(element);
     },
-    highlight: (element, errorClass, validClass) => {
+    highlight: function (element, errorClass, validClass) {
       $(element).addClass('is-invalid').removeClass('is-valid');
     },
-    unhighlight: (element, errorClass, validClass) => {
+    unhighlight: function (element, errorClass, validClass) {
       $(element).removeClass('is-invalid').addClass('is-valid');
     },
 
