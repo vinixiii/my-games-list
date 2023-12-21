@@ -133,3 +133,40 @@ tbody tr td.gameDescription {
   opacity: 0;
   visibility: hidden;
 }
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.75em;
+}
+
+.btn-lg {
+  font-size: 16px;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:hover,
+.btn-primary {
+  color: $textDark !important;
+}
+
+label.error {
+  margin: 0;
+  margin-top: 8px;
+  color: $danger;
+}
+
+.form-control.is-valid {
+  &:focus {
+    border-color: $primary !important;
+    box-shadow: 0 0 0 0.2rem rgba(12, 186, 255, 0.25) !important;
+  }
+
+  border-color: $primary;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='%230CBAFF' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>");
+}

@@ -104,8 +104,13 @@ const renderEmptyListSection = (type) => {
   gamesListSpinner.css('display', 'none');
 
   if (type === 'error') {
-    $('#empty-title').text('Ocorreu um erro ao buscar os jogos :(');
-    $('#empty-text').text('Recarregue a página para tentar novamente.');
+    $('#games-list-empty-section #empty-title').text(
+      'Ocorreu um erro ao buscar os jogos :('
+    );
+
+    $('#games-list-empty-section #empty-text').text(
+      'Recarregue a página para tentar novamente.'
+    );
   }
 
   const gamesListTableBody = $('#games-list-table');

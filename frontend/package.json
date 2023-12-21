@@ -17,6 +17,7 @@
     "bootstrap": "^4.6.2",
     "bootstrap-icons": "^1.11.2",
     "jquery": "^3.7.1",
+    "jquery-validation": "^1.20.0",
     "toastify-js": "^1.12.0"
   }
 }

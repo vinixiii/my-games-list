@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="img/my-games-list.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <title>MyGamesList</title>
+  </head>
+
+  <body>
+    <header
+      class="pl-3 pr-4 bg-dark d-flex justify-content-center align-items-center"
+    >
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark d-flex flex-grow-1 justify-content-between px-0"
+      >
+        <a class="navbar-brand" href="index.html">
+          <img src="/img/my-games-list.svg" width="84" alt="Logo MyGamesList" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-items"
+          aria-controls="navbar-items"
+          aria-expanded="false"
+          aria-label="Expandir ou esconder menu de navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse pl-4" id="navbar-items">
+          <ul class="navbar-nav d-flex flex-grow-1 justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link mr-4" href="index.html"
+                >Início<span class="sr-only">(atual)</span></a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="add-game.html">Adicionar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="d-flex flex-column justify-content-center">
+      <div class="container pt-4 px-4 px-lg-5">
+        <h1 class="title">Adicionar novo jogo</h1>
+
+        <div class="m-0 mt-3 divider bg-primary"></div>
+
+        <section id="add-game-section">
+          <form id="add-game-form" novalidate>
+            <div class="mb-3">
+              <label for="name">Nome</label>
+
+              <input id="name" name="name" type="text" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label for="description">Descrição</label>
+
+              <textarea
+                rows="2"
+                id="description"
+                name="description"
+                type="text"
+                class="form-control"
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="developedBy">Produtora</label>
+
+              <input
+                id="developedBy"
+                name="developedBy"
+                type="text"
+                class="form-control"
+              />
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="year">Ano</label>
+
+                <input id="year" name="year" type="text" class="form-control" />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="minimumAge">Idade mínima</label>
+
+                <input
+                  id="minimumAge"
+                  name="minimumAge"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="mt-5 d-flex justify-content-end">
+              <button
+                id="add-game-form-button"
+                class="btn btn-primary btn-lg loading-button"
+              >
+                <span id="add-game-form-button-text">Adicionar</span>
+                <div
+                  id="add-game-form-button-spinner"
+                  class="spinner-border spinner-border-sm button-spinner"
+                >
+                  <span class="sr-only">Carregando...</span>
+                </div>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./js/bootstrap.js"></script>
+    <script type="module" src="./js/addGame.js"></script>
+  </body>
+</html>
