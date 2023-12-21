@@ -88,20 +88,7 @@ Com os softwares essenciais instalados, basta seguir os seguintes passos para ex
 Pronto! O servidor estará rodando e poderá ser acessado no seguinte endereço:
 `http://localhost:3000`
 
-Com isso é possível utilizar a interface para gerenciar os jogos.
-
-### Tecnologias e ferramentas 🛠
-
-Desenvolvido utilizando as seguintes tecnologias e ferramentas:
-
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Bootstrap](https://getbootstrap.com/)
-- [Bootstrap](https://sass-lang.com/)
-- [jQuery](https://jquery.com/)
-- [jQuery Validation](https://jqueryvalidation.org/)
-- [Toastify](https://apvarun.github.io/toastify-js/)
+Com isso, será possível utilizar a interface para gerenciar os jogos.
 
 ## Backend 👾
 
@@ -127,11 +114,12 @@ interface Game {
 #### GET: /api/games
 
 Descrição:
+
 Retorna todos os jogos
 
 Exemplo de sucesso:
 
-```json
+```
 Status code:
 200
 
@@ -142,11 +130,12 @@ true
 #### GET: /api/games/:id
 
 Descrição:
+
 Retorna a informação de um jogo específico
 
 Exemplo de sucesso:
 
-```json
+```
 Status code:
 200
 
@@ -157,6 +146,7 @@ true
 #### POST: /api/games
 
 Descrição:
+
 Adiciona um novo jogo
 
 Parâmetros:
@@ -171,7 +161,7 @@ Parâmetros:
 
 Exemplo de payload:
 
-```json
+```
 {
   "name": "Rocket League",
   "description": "Jogo que combina elementos de corrida e futebol",
@@ -183,7 +173,7 @@ Exemplo de payload:
 
 Exemplo de sucesso:
 
-```json
+```
 // Supondo que o payload tenha sido como no exemplo acima...
 
 Status code:
@@ -196,6 +186,7 @@ Corpo da resposta:
 #### PUT: /api/games
 
 Descrição:
+
 Atualiza os detalhes de um jogo existente
 
 Parâmetros:
@@ -211,7 +202,7 @@ Parâmetros:
 
 Exemplo de payload:
 
-```json
+```
 {
 	"id": 123
 	"name": "Rocket League",
@@ -224,7 +215,7 @@ Exemplo de payload:
 
 Exemplo de sucesso:
 
-```json
+```
 // Supondo que o payload tenha sido como no exemplo acima...
 
 Status code:
@@ -237,11 +228,12 @@ true
 #### DELETE: /api/games/:id
 
 Descrição:
+
 Retorna a informação de um jogo específico
 
 Exemplo de sucesso:
 
-```json
+```
 Status code:
 200
 
@@ -259,7 +251,7 @@ Exemplo:
 
 Considere uma operação de `DELETE` para `/api/games/:id`, onde o `id` passado não se refere a nenhum jogo. Teremos o seguite retorno da API:
 
-```json
+```
 Status code:
 400
 
@@ -273,7 +265,7 @@ Corpo da resposta:
 
 Considere uma operação de `POST` para `/api/games`, onde o payload não está correto. Teremos o seguite retorno da API::
 
-```json
+```
 // Supondo que o payload tenha sido:
 // {
 //		"name": "Rocket League",
@@ -339,7 +331,7 @@ O Frontend foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Bootstrap](https://getbootstrap.com/)
-- [Bootstrap](https://sass-lang.com/)
+- [Sass](https://sass-lang.com/)
 - [jQuery](https://jquery.com/)
 - [jQuery Validation](https://jqueryvalidation.org/)
 - [Toastify](https://apvarun.github.io/toastify-js/)
