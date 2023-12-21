@@ -204,12 +204,12 @@ Exemplo de payload:
 
 ```
 {
-	"id": 123
-	"name": "Rocket League",
-	"description": "Jogo que combina elementos de corrida e futebol",
-	"developedBy": "Psyonix",
-	"year": 2015,
-	"minimumAge": 15
+  "id": 123
+  "name": "Rocket League",
+  "description": "Jogo que combina elementos de corrida e futebol",
+  "developedBy": "Psyonix",
+  "year": 2015,
+  "minimumAge": 15
 }
 ```
 
@@ -257,7 +257,7 @@ Status code:
 
 Corpo da resposta:
 {
-	"message": "Jogo não encontrado!"
+  "message": "Jogo não encontrado!"
 }
 ```
 
@@ -281,19 +281,19 @@ Status code:
 
 Corpo da resposta:
 {
-	"formErrors": {
-		"invalidFields": [ // <- Campos que não são esperados
-			"extraField"
-		]
-	},
-	"fieldErrors": { // <- Campos que não estão no formato correto
-		"description": [
-			"O campo [description] não deve ser vazio"
-		],
-		"minimumAge": [
-			"O campo [minimumAge] deve ser um número"
-		]
-	}
+  "formErrors": {
+    "invalidFields": [ // <- Campos que não são esperados
+      "extraField"
+    ]
+  },
+  "fieldErrors": { // <- Campos que não estão no formato correto
+    "description": [
+      "O campo [description] não deve ser vazio"
+    ],
+    "minimumAge": [
+      "O campo [minimumAge] deve ser um número"
+    ]
+  }
 }
 ```
 
