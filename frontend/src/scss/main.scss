@@ -58,6 +58,24 @@ nav.navbar {
   max-width: 1440px;
 }
 
+#games-list-spinner {
+  margin-top: 164px;
+}
+
+#games-list-empty-section {
+  & p:first-child {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  display: none;
+  margin-top: 128px;
+}
+
+#games-list-section {
+  display: none;
+}
+
 .table thead th {
   text-transform: uppercase;
   vertical-align: middle;

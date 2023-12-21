@@ -63,9 +63,28 @@
 
         <div class="m-0 mt-3 divider"></div>
 
-        <section class="table-responsive-lg">
+        <div class="d-flex justify-content-center">
+          <div id="games-list-spinner">
+            <div
+              class="spinner-border spinner-border-lg align-self-end"
+              role="status"
+            >
+              <span class="sr-only">Carregando...</span>
+            </div>
+          </div>
+        </div>
+
+        <section id="games-list-empty-section" class="text-center">
+          <p id="empty-title">Ainda não há jogos cadastrados :/</p>
+          <p id="empty-text">
+            Acesse a página "Adicionar" na barra de navegação superior para
+            cadastrar novos jogos.
+          </p>
+        </section>
+
+        <section id="games-list-section" class="table-responsive-lg">
           <table
-            id="gamesListTable"
+            id="games-list-table"
             class="table rounded table-striped table-borderless table-hover"
           >
             <thead>
@@ -79,56 +98,13 @@
               </tr>
             </thead>
 
-            <tbody>
-              <tr class="align-content-center">
-                <td>Destiny</td>
-                <td class="gameDescription">
-                  Jogo eletrônico online de tiro em primeira pessoa, jogado num
-                  mundo aberto e persistente num ambiente "mítico de ficção
-                  científica".
-                </td>
-                <td>Bungie</td>
-                <td>2014</td>
-                <td>14</td>
-                <td>
-                  <div class="d-flex">
-                    <button id="editButton" class="btn btn-secondary mr-2">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                    <button id="deleteButton" class="btn btn-danger">
-                      <i class="bi bi-trash"></i>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <tr class="align-content-center">
-                <td>Destiny 2</td>
-                <td class="gameDescription">
-                  Jogo eletrônico online de tiro em primeira pessoa, jogado num
-                  mundo aberto e persistente num ambiente "mítico de ficção
-                  científica".
-                </td>
-                <td>Bungie</td>
-                <td>2017</td>
-                <td>14</td>
-                <td>
-                  <div class="d-flex">
-                    <button id="editButton" class="btn btn-secondary mr-2">
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
-                    <button id="deleteButton" class="btn btn-danger">
-                      <i class="bi bi-trash"></i>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </section>
       </div>
     </main>
 
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/bootstrap.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
