@@ -75,7 +75,7 @@
         </div>
 
         <section id="games-list-empty-section" class="text-center">
-          <p id="empty-title">Ainda não há jogos cadastrados :/</p>
+          <p id="empty-title">Não há jogos cadastrados :/</p>
           <p id="empty-text">
             Acesse a página "Adicionar" na barra de navegação superior para
             cadastrar novos jogos.
@@ -103,6 +103,54 @@
         </section>
       </div>
     </main>
+
+    <div
+      id="delete-game-modal"
+      class="modal fade"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div id="delete-game-modal" class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="p-4">
+              <h1 class="modal-title">Atenção!</h1>
+
+              <div class="m-0 mt-3 smallDivider"></div>
+            </div>
+
+            <div class="modal-body p-4">
+              <p>Tem certeza que deseja excluir este jogo?</p>
+            </div>
+
+            <div class="modal-footer p-4">
+              <button
+                id="cancelGameDeletionButton"
+                type="button"
+                class="btn btn-outline-dark"
+                data-dismiss="modal"
+              >
+                Não
+              </button>
+
+              <button
+                id="confirm-deletion-button"
+                type="button"
+                class="btn btn-danger loading-button"
+              >
+                <span id="confirm-deletion-button-text">Sim, excluir!</span>
+                <div
+                  id="confirm-deletion-button-spinner"
+                  class="spinner-border spinner-border-sm button-spinner"
+                >
+                  <span class="sr-only">Carregando...</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="./js/bootstrap.js"></script>
     <script type="module" src="./js/index.js"></script>

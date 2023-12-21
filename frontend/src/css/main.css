@@ -9246,7 +9246,8 @@ nav.navbar {
     width: 100%;
   }
 }
-.title {
+.title,
+.modal-title {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 600;
@@ -9304,6 +9305,36 @@ nav.navbar {
 
 tbody tr td.gameDescription {
   max-width: 400px;
+}
+
+.smallDivider {
+  width: 3.125rem;
+  height: 0.5rem;
+  background-color: #fd094f;
+  margin-bottom: 0 !important;
+}
+
+.modal-footer {
+  border: 0;
+}
+
+.loading-button {
+  position: relative;
+}
+.loading-button > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -7px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
