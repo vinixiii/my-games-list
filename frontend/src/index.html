@@ -6,15 +6,61 @@
 
     <link rel="icon" type="image/svg+xml" href="img/my-games-list.svg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    /> -->
+
     <link href="./css/main.css" rel="stylesheet" />
 
     <title>MyGamesList</title>
   </head>
 
   <body>
-    <div id="app">
-      <h1>Hello World!</h1>
-    </div>
+    <header
+      class="pl-3 pr-4 bg-dark d-flex justify-content-center align-items-center"
+    >
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark d-flex flex-grow-1 justify-content-between px-0"
+      >
+        <a class="navbar-brand" href="index.html">
+          <img src="/img/my-games-list.svg" width="84" alt="Logo MyGamesList" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse pl-4" id="navbarText">
+          <ul class="navbar-nav d-flex flex-grow-1 justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active mr-4" href="index.html"
+                >Início<span class="sr-only">(atual)</span></a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="add-game.html">Adicionar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <script type="module" src="./js/main.js"></script>
   </body>

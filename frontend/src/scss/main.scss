@@ -1,0 +1,42 @@
+@import 'import.scss';
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: $gray-50;
+}
+
+.nav-bar {
+  max-width: 1440px;
+}
+
+.navbar .nav-item .nav-link {
+  &.active {
+    color: $gray-50;
+  }
+
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+  .navbar .nav-item .nav-link {
+    position: relative;
+  }
+
+  .navbar .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: $gray-50;
+    transition: all 0.2s ease-in-out;
+    width: 0%;
+  }
+
+  .navbar .nav-item .nav-link.active::before,
+  .navbar .nav-item .nav-link:hover::before {
+    width: 100%;
+  }
+}

@@ -1,1 +1,1 @@
-console.log('Hellow World!');
+import * as bootstrap from 'bootstrap';
