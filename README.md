@@ -125,22 +125,22 @@ Status code:
 
 Corpo da resposta:
 [
-	{
-		"id": 1,
-		"name": "Destiny",
-		"description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
-		"developedBy": "Bungie",
-		"year": 2014,
-		"minimumAge": 14
-	},
-	{
-		"id": 2,
-		"name": "Destiny 2",
-		"description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
-		"developedBy": "Bungie",
-		"year": 2017,
-		"minimumAge": 14
-	}
+  {
+    "id": 1,
+    "name": "Destiny",
+    "description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
+    "developedBy": "Bungie",
+    "year": 2014,
+    "minimumAge": 14
+  },
+  {
+    "id": 2,
+    "name": "Destiny 2",
+    "description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
+    "developedBy": "Bungie",
+    "year": 2017,
+    "minimumAge": 14
+  }
 ]
 ```
 
@@ -158,12 +158,12 @@ Status code:
 
 Corpo da resposta:
 {
-	"id": 1,
-	"name": "Destiny",
-	"description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
-	"developedBy": "Bungie",
-	"year": 2014,
-	"minimumAge": 14
+  "id": 1,
+  "name": "Destiny",
+  "description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
+  "developedBy": "Bungie",
+  "year": 2014,
+  "minimumAge": 14
 }
 ```
 
