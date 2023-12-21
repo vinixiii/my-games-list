@@ -73,8 +73,8 @@ Para utilizar a aplicação em sua máquina é necessário ter instalado:
 
 Com os softwares essenciais instalados, basta seguir os seguintes passos para executar a aplicação em sua máquina:
 
-1. **Clonar o projeto** <br>
-   Abra o terminal em um diretório de sua preferência e cole o seguinte código: _`git clone https://github.com/vinixiii/my-games-list.git`_
+1. **Clonar ou baixar o projeto** <br>
+   Para clonar o diretório, abra o terminal em um diretório de sua preferência e cole o seguinte código: _`git clone https://github.com/vinixiii/my-games-list.git`_
 
 2. **Entrar na pasta <ins>/frontend</ins>** <br>
    Abra o diretório clonado e utilize o seguinte comando no terminal: _`cd frontend`_
@@ -124,7 +124,24 @@ Status code:
 200
 
 Corpo da resposta:
-true
+[
+	{
+		"id": 1,
+		"name": "Destiny",
+		"description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
+		"developedBy": "Bungie",
+		"year": 2014,
+		"minimumAge": 14
+	},
+	{
+		"id": 2,
+		"name": "Destiny 2",
+		"description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
+		"developedBy": "Bungie",
+		"year": 2017,
+		"minimumAge": 14
+	}
+]
 ```
 
 #### GET: /api/games/:id
@@ -140,7 +157,14 @@ Status code:
 200
 
 Corpo da resposta:
-true
+{
+	"id": 1,
+	"name": "Destiny",
+	"description": "Jogo de tiro em primeira pessoa onde os jogadores, como Guardiões, defendem a última cidade da Terra.",
+	"developedBy": "Bungie",
+	"year": 2014,
+	"minimumAge": 14
+}
 ```
 
 #### POST: /api/games
@@ -306,8 +330,8 @@ Para utilizar a aplicação em sua máquina é necessário ter instalado:
 
 Com os softwares essenciais instalados, basta seguir os seguintes passos para executar a aplicação em sua máquina:
 
-1. **Clonar o projeto** <br>
-   Abra o terminal em um diretório de sua preferência e cole o seguinte código: _`git clone https://github.com/vinixiii/my-games-list.git`_
+1. **Clonar ou baixar o projeto** <br>
+   Para clonar o diretório, abra o terminal em um diretório de sua preferência e cole o seguinte código: _`git clone https://github.com/vinixiii/my-games-list.git`_
 
 2. **Entrar na pasta <ins>/backend</ins>** <br>
    Abra o diretório clonado e utilize o seguinte comando no terminal: _`cd backend`_
