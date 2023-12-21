@@ -7,6 +7,14 @@ import { toast } from './utils/toast';
 const updateGameFormSpinner = $('#update-game-form-spinner');
 const updateGameFormSection = $('#update-game-form-section');
 
+$(() => {
+  const backButton = $('#update-game-form-back-button');
+
+  backButton.on('click', () => {
+    window.history.back();
+  });
+});
+
 const renderGameInfo = (game) => {
   updateGameFormSpinner.css('display', 'none');
   updateGameFormSection.css('display', 'block');
