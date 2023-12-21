@@ -15,4 +15,12 @@ export class GameController {
 
     return res.status(200).json(game);
   }
+
+  async delete(req: Request<{ id: string }>, res: Response) {
+    const { id } = req.params;
+
+    await gamesService.delete(id);
+
+    return res.status(200).json(true);
+  }
 }

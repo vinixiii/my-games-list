@@ -8,4 +8,6 @@ const gamesController = new GameController();
 gamesRouter.get('/api/games', gamesController.getAll);
 gamesRouter.get('/api/games/:id', gamesController.getById);
 
+gamesRouter.delete('/api/games/:id', gamesController.delete);
+
 export { gamesRouter };

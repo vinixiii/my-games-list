@@ -17,6 +17,10 @@ class GamesService {
 
     return espmGameDTOToGame(apiResponse.data);
   }
+
+  async delete(id: string) {
+    await espmGameApi.delete<true>(`/${id}`);
+  }
 }
 
 const gamesService = new GamesService();
