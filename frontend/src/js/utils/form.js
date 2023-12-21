@@ -18,7 +18,7 @@ const validateForm = (formId, onSubmit) => {
     'Por favor, insira apenas números inteiros.'
   );
 
-  return $(formId).validate({
+  return $(`#${formId}`).validate({
     rules: {
       name: {
         required: true,
@@ -81,6 +81,10 @@ const validateForm = (formId, onSubmit) => {
 const form = {
   validate(formId, onSubmit) {
     validateForm(formId, onSubmit);
+  },
+  resetStyle(formId) {
+    $(`#${formId} input`).removeClass('is-valid is-invalid');
+    $(`#${formId} textarea`).removeClass('is-valid is-invalid');
   },
 };
 

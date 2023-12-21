@@ -4,6 +4,8 @@ import { loadingButton } from './utils/loadingButton';
 import { toast } from './utils/toast';
 
 const gamesListSpinner = $('#games-list-spinner');
+const gamesListSection = $('#games-list-section');
+
 const deleteGameModal = $('#delete-game-modal');
 const confirmDeletionButton = $('#confirm-deletion-button');
 
@@ -50,9 +52,6 @@ const openDeleteGameModal = async (gameId) => {
 
 const renderGamesList = (gamesList) => {
   gamesListSpinner.css('display', 'none');
-
-  const gamesListSection = $('#games-list-section');
-
   gamesListSection.css('display', 'flex');
 
   const gamesListTableBody = $('#games-list-table tbody');
@@ -69,10 +68,10 @@ const renderGamesList = (gamesList) => {
         <td>${game.minimumAge}</td>
         <td>
           <div class="d-flex">
-            <button id="update-game-button-${game.id}" data-game-id="${game.id}" class="btn btn-secondary mr-2">
+            <button id="update-game-button-${game.id}" class="btn btn-secondary mr-2">
               <i class="bi bi-pencil-square"></i>
             </button>
-            <button id="delete-game-button-${game.id}" data-game-id="${game.id}" class="btn btn-danger" data-game-id="${game.id}">
+            <button id="delete-game-button-${game.id}" class="btn btn-danger">
               <i class="bi bi-trash"></i>
             </button>
           </div>
@@ -84,8 +83,8 @@ const renderGamesList = (gamesList) => {
       `#games-list-table #update-game-button-${game.id}`
     );
 
-    updateGameButton.on('click', async (event) => {
-      // TODO: handle game update
+    updateGameButton.on('click', async () => {
+      window.location.href = `updateGame.html?id=${game.id}`;
     });
 
     const deleteGameButton = $(
@@ -93,14 +92,14 @@ const renderGamesList = (gamesList) => {
     );
 
     deleteGameButton.on('click', async (event) => {
-      const gameId = $(event.currentTarget).data('gameId');
-
-      openDeleteGameModal(gameId);
+      openDeleteGameModal(game.id);
     });
   });
 };
 
 const renderEmptyListSection = (type) => {
+  const gamesListEmptySection = $('#games-list-empty-section');
+
   gamesListSpinner.css('display', 'none');
 
   if (type === 'error') {
@@ -113,10 +112,7 @@ const renderEmptyListSection = (type) => {
     );
   }
 
-  const gamesListTableBody = $('#games-list-table');
-  const gamesListEmptySection = $('#games-list-empty-section');
-
-  gamesListTableBody.css('display', 'none');
+  gamesListSection.css('display', 'none');
   gamesListEmptySection.css('display', 'block');
 };
 
@@ -127,6 +123,7 @@ const gamesList = {
 
       if (!gamesList.length) {
         renderEmptyListSection();
+        return;
       }
 
       renderGamesList(gamesList);

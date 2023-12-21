@@ -49,5 +49,5 @@ const handleSubmitForm = (form) => {
 };
 
 $(() => {
-  form.validate('#add-game-form', handleSubmitForm);
+  form.validate('add-game-form', handleSubmitForm);
 });

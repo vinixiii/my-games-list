@@ -44,13 +44,13 @@
         <div class="collapse navbar-collapse pl-4" id="navbar-items">
           <ul class="navbar-nav d-flex flex-grow-1 justify-content-end">
             <li class="nav-item">
-              <a class="nav-link mr-4" href="index.html"
+              <a class="nav-link active mr-4" href="index.html"
                 >Início<span class="sr-only">(atual)</span></a
               >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="addGame.html">Adicionar</a>
+              <a class="nav-link disabled" href="addGame.html">Adicionar</a>
             </li>
           </ul>
         </div>
@@ -59,12 +59,35 @@
 
     <main class="d-flex flex-column justify-content-center">
       <div class="container pt-4 px-4 px-lg-5">
-        <h1 class="title">Adicionar novo jogo</h1>
+        <h1 class="title">Editar jogo</h1>
 
-        <div class="m-0 mt-3 divider bg-primary"></div>
+        <div class="m-0 mt-3 divider bg-secondary"></div>
 
-        <section id="add-game-section">
-          <form id="add-game-form" novalidate>
+        <div class="d-flex justify-content-center">
+          <div id="update-game-form-spinner">
+            <div
+              class="spinner-border spinner-border-lg align-self-end"
+              role="status"
+            >
+              <span class="sr-only">Carregando...</span>
+            </div>
+          </div>
+        </div>
+
+        <section id="update-game-form-error-section" class="text-center">
+          <p id="empty-title">Ocorreu um erro ao buscar os dados do jogo :(</p>
+          <p id="empty-text">Recarregue a página para tentar novamente.</p>
+        </section>
+
+        <section id="update-game-form-section">
+          <form id="update-game-form" novalidate>
+            <input
+              id="id"
+              name="id"
+              type="text"
+              class="form-control hidden-input"
+            />
+
             <div class="mb-3">
               <label for="name">Nome</label>
 
@@ -115,12 +138,20 @@
 
             <div class="mt-5 d-flex justify-content-end">
               <button
-                id="add-game-form-button"
-                class="btn btn-primary btn-lg loading-button"
+                id="update-game-form-back-button"
+                class="btn btn-outline-dark mr-4"
               >
-                <span id="add-game-form-button-text">Adicionar</span>
+                Voltar
+              </button>
+
+              <button
+                id="update-button"
+                class="btn btn-secondary btn-lg loading-button"
+              >
+                <span id="update-button-text">Salvar</span>
+
                 <div
-                  id="add-game-form-button-spinner"
+                  id="update-button-spinner"
                   class="spinner-border spinner-border-sm button-spinner"
                 >
                   <span class="sr-only">Carregando...</span>
@@ -133,6 +164,6 @@
     </main>
 
     <script type="module" src="./js/bootstrap.js"></script>
-    <script type="module" src="./js/addGame.js"></script>
+    <script type="module" src="./js/updateGame.js"></script>
   </body>
 </html>

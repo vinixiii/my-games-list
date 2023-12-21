@@ -9264,20 +9264,24 @@ nav.navbar {
   max-width: 1440px;
 }
 
-#games-list-spinner {
+#games-list-spinner,
+#update-game-form-spinner {
   margin-top: 164px;
 }
 
-#games-list-empty-section {
+#games-list-empty-section,
+#update-game-form-error-section {
   display: none;
   margin-top: 128px;
 }
-#games-list-empty-section p:first-child {
+#games-list-empty-section p:first-child,
+#update-game-form-error-section p:first-child {
   font-size: 1.125rem;
   font-weight: 600;
 }
 
-#games-list-section {
+#games-list-section,
+#update-game-form-section {
   display: none;
 }
 
@@ -9371,6 +9375,14 @@ label.error {
 .form-control.is-valid:focus {
   border-color: #0cbaff !important;
   box-shadow: 0 0 0 0.2rem rgba(12, 186, 255, 0.25) !important;
+}
+
+.hidden-input {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -59,11 +59,13 @@ nav.navbar {
   max-width: 1440px;
 }
 
-#games-list-spinner {
+#games-list-spinner,
+#update-game-form-spinner {
   margin-top: 164px;
 }
 
-#games-list-empty-section {
+#games-list-empty-section,
+#update-game-form-error-section {
   & p:first-child {
     font-size: 1.125rem;
     font-weight: 600;
@@ -73,7 +75,8 @@ nav.navbar {
   margin-top: 128px;
 }
 
-#games-list-section {
+#games-list-section,
+#update-game-form-section {
   display: none;
 }
 
@@ -169,4 +172,12 @@ label.error {
 
   border-color: $primary;
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='%230CBAFF' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>");
+}
+
+.hidden-input {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
 }
